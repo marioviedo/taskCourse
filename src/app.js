@@ -12,7 +12,7 @@ const app = express();
 const specs = swaggerJSDoc(options)
 
 app.use(cors());
-app.use(morgan("dev"));
+app.use(morgan("dev"))
 
 app.use(express.json());
 app.use(taskrouter);
