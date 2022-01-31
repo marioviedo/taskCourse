@@ -2,9 +2,9 @@ import { connect } from "../database";
 
 export const getTasks = async(req, res) =>{
 
-    /*const dbConnection = await connect()
-    const [response] = await dbConnection.query('SELECT * FROM tasks')    */
-    res.send("hello world azure")
+    const dbConnection = await connect()
+    const [response] = await dbConnection.query('SELECT * FROM tasks') 
+    res.json(response)    
 }
 
 export const getTaskCount = async (req, res)=>{
